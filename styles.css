@@ -9,19 +9,8 @@ body {
 header {
     text-align: center;
     padding: 50px 0;
-    background: url('https://example.com/your-background-image.jpg') no-repeat center center; /* Insira uma URL para sua imagem de fundo */
-    background-size: cover;
+    background-color: #d81b60; /* Rosa forte */
     color: white;
-}
-
-h1 {
-    font-size: 36px;
-    color: #d81b60; /* Rosa forte */
-}
-
-h2 {
-    font-size: 24px;
-    color: #880e4f; /* Rosa escuro */
 }
 
 .intro, .confirmation, .messages {
@@ -30,8 +19,19 @@ h2 {
     padding: 20px;
     margin: 20px auto;
     max-width: 600px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 h3 {
@@ -63,15 +63,5 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #e91e63; /* Rosa */
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Estilos para florais */
-.messages {
-    background-image: url('https://example.com/your-flower-image.jpg'); /* Insira uma URL para sua imagem floral */
-    background-size: cover;
     color: white;
 }
