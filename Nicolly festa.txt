@@ -15,12 +15,12 @@
     <section class="intro">
         <p>Você está convidado para uma noite mágica em celebração aos 15 anos da Nicolly Eduarda!</p>
         <p><strong>Data:</strong> 15 de março de 2025</p>
-        <p><strong>Local:</strong>[Rua Imirim, 476 - Jandira, SP]</p>
+        <p><strong>Local:</strong> [Rua Imirim, 476 - Jandira]</p>
     </section>
 
     <section class="confirmation">
         <h3>Confirme sua Presença</h3>
-        <form onsubmit="mostrarAgradecimento(event)">
+        <form action="#" method="POST">
             <label for="name">Seu Nome:</label>
             <input type="text" id="name" name="name" required>
             
@@ -36,13 +36,12 @@
 
             <button type="submit">Enviar</button>
         </form>
-        <div id="mensagem-agradecimento" style="display:none; margin-top: 20px; color: green;"></div>
     </section>
 
     <section class="messages">
         <h3>Deixe suas Mensagens e Fotos</h3>
         <textarea placeholder="Escreva sua mensagem para a Nicolly..."></textarea>
-        <input type="file" accept="image/*,video/*">
+        <input type="file" accept="image/,video/">
         <button type="submit">Enviar Mensagem</button>
     </section>
 
@@ -50,14 +49,5 @@
         <p>Esperamos ver você lá!</p>
         <p>&copy; 2025 Festa de Aniversário da Nicolly Eduarda</p>
     </footer>
-
-    <script>
-        function mostrarAgradecimento(event) {
-            event.preventDefault();
-            const mensagemAgradecimento = document.getElementById('mensagem-agradecimento');
-            mensagemAgradecimento.innerHTML = "Obrigado pela sua confirmação!";
-            mensagemAgradecimento.style.display = 'block';
-        }
-    </script>
 </body>
 </html>
