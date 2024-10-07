@@ -6,30 +6,17 @@
     <title>Aniversário Nicolly Eduarda</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        function enviarWhatsApp(event) {
-            event.preventDefault(); // Evita o envio do formulário padrão
+        function mostrarAgradecimento(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
 
-            // Obtém os valores dos campos
-            const nome = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const rsvp = document.getElementById('rsvp').value;
-
-            // Monta a mensagem
-            const mensagem = `Nome: ${nome}%0AEmail: ${email}%0AConfirmação: ${rsvp}`;
-
-            // URL do WhatsApp
-            const numero = '5511932919948'; // Inclua o código do país
-            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagem}`;
+            // Esconde o formulário
+            const formulario = document.querySelector('.confirmation');
+            formulario.style.display = 'none';
 
             // Mostra a mensagem de agradecimento
             const mensagemAgradecimento = document.getElementById('mensagem-agradecimento');
-            mensagemAgradecimento.innerHTML = "Obrigado pela confirmação!";
-            mensagemAgradecimento.style.display = "block";
-
-            // Redireciona para o WhatsApp após 2 segundos (2000 ms)
-            setTimeout(() => {
-                window.open(urlWhatsApp, '_blank');
-            }, 2000);
+            mensagemAgradecimento.innerHTML = "Obrigado pela sua confirmação!";
+            mensagemAgradecimento.style.display = 'block';
         }
     </script>
 </head>
@@ -47,7 +34,7 @@
 
     <section class="confirmation">
         <h3>Confirme sua Presença</h3>
-        <form onsubmit="enviarWhatsApp(event)">
+        <form onsubmit="mostrarAgradecimento(event)">
             <label for="name">Seu Nome:</label>
             <input type="text" id="name" name="name" required>
             
