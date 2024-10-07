@@ -15,7 +15,7 @@
     <section class="intro">
         <p>Você está convidado para uma noite mágica em celebração aos 15 anos da Nicolly Eduarda!</p>
         <p><strong>Data:</strong> 15 de março de 2025</p>
-        <p><strong>Local:</strong> [Rua Imirim, 476 - Jandira]</p>
+        <p><strong>Local:</strong> Rua Imirim, 476 - Jandira, SP</p> <!-- Removido os colchetes -->
     </section>
 
     <section class="confirmation">
@@ -41,7 +41,7 @@
     <section class="messages">
         <h3>Deixe suas Mensagens e Fotos</h3>
         <textarea placeholder="Escreva sua mensagem para a Nicolly..."></textarea>
-        <input type="file" accept="image/,video/">
+        <input type="file" accept="image/*,video/*"> <!-- Correção no accept -->
         <button type="submit">Enviar Mensagem</button>
     </section>
 
