@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aniversário Nicolly Eduarda</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function enviarWhatsApp(event) {
+            event.preventDefault(); // Evita o envio do formulário padrão
+
+            // Obtém os valores dos campos
+            const nome = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const rsvp = document.getElementById('rsvp').value;
+
+            // Monta a mensagem
+            const mensagem = `Nome: ${nome}%0AEmail: ${email}%0AConfirmação: ${rsvp}`;
+
+            // URL do WhatsApp
+            const numero = '5511932919948'; // Inclua o código do país
+            const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numero}&text=${mensagem}`;
+
+            // Mostra a mensagem de agradecimento
+            const mensagemAgradecimento = document.getElementById('mensagem-agradecimento');
+            mensagemAgradecimento.innerHTML = "Obrigado pela confirmação!";
+            mensagemAgradecimento.style.display = "block";
+
+            // Redireciona para o WhatsApp após 2 segundos (2000 ms)
+            setTimeout(() => {
+                window.open(urlWhatsApp, '_blank');
+            }, 2000);
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -20,7 +47,7 @@
 
     <section class="confirmation">
         <h3>Confirme sua Presença</h3>
-        <form action="#" method="POST">
+        <form onsubmit="enviarWhatsApp(event)">
             <label for="name">Seu Nome:</label>
             <input type="text" id="name" name="name" required>
             
@@ -36,12 +63,14 @@
 
             <button type="submit">Enviar</button>
         </form>
+        <!-- Div para a mensagem de agradecimento -->
+        <div id="mensagem-agradecimento" style="display:none; margin-top: 20px; color: green;"></div>
     </section>
 
     <section class="messages">
         <h3>Deixe suas Mensagens e Fotos</h3>
         <textarea placeholder="Escreva sua mensagem para a Nicolly..."></textarea>
-        <input type="file" accept="image/,video/">
+        <input type="file" accept="image/*,video/*">
         <button type="submit">Enviar Mensagem</button>
     </section>
 
