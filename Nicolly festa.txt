@@ -15,7 +15,7 @@
     <section class="intro">
         <p>Você está convidado para uma noite mágica em celebração aos 15 anos da Nicolly Eduarda!</p>
         <p><strong>Data:</strong> 15 de março de 2025</p>
-        <p><strong>Local:</strong> Rua Imirim, 476 - Jandira, SP</p>
+        <p><strong>Local:</strong>[Rua Imirim, 476 - Jandira, SP]</p>
     </section>
 
     <section class="confirmation">
